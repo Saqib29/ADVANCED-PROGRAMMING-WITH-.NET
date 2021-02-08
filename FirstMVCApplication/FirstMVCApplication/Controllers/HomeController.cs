@@ -8,9 +8,9 @@ namespace FirstMVCApplication.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index()
+        public string Index(int? id)
         {
-            return "It works";
+            return "It works" + id;
         }
     }
 }
