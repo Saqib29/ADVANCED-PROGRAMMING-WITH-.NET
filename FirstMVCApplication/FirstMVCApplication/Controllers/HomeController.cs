@@ -12,9 +12,9 @@ namespace FirstMVCApplication.Controllers
         {
             return RedirectToAction("Another");
         }
-        public string Another()
+        public ActionResult Another()
         {
-            return "From another method";
+            return Content("From another method");
         }
     }
 }
