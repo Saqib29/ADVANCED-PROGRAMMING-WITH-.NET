@@ -37,11 +37,17 @@ namespace FirstMVCApplication.Controllers
 
             TempData["name"] = "Saqib";
 
-            return View();
-            //return RedirectToAction("Another");
+            //return View();
+            return RedirectToAction("Another");
         }
 
         public ActionResult Another()
+        {
+            //return View("Index");
+            return RedirectToAction("Another2");
+        }
+
+        public ActionResult Another2()
         {
             return View("Index");
         }
