@@ -10,7 +10,12 @@ namespace FirstMVCApplication.Controllers
     {
         public string Index()
         {
-            return "Hello, this is from person controller index method";
+            return "Hello, from Index of Person Controller";
+        }
+
+        public string MyMethod()
+        {
+            return "Hello, From MyMethod of Person Controller";
         }
     }
 }

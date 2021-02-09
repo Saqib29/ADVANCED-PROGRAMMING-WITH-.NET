@@ -14,7 +14,8 @@ namespace FirstMVCApplication.Controllers
         }
         public ActionResult Another(int? id)
         {
-            return Content("From another method: " + id);
+            //return Content("From another method: " + id);
+            return RedirectToAction("MyMethod", "Person");
         }
     }
 }
