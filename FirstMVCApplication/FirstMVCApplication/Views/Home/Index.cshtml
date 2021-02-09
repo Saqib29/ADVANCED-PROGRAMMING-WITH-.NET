@@ -8,9 +8,12 @@
 </head>
 <body>
     <div> 
-        <h1>Hello World!</h1> &
+        @*<h1>Hello World!</h1> &
         <h1>Hello @Session["name"]</h1>
-        <h3>Ranking: @Session["rank"]</h3>
+        <h3>Ranking: @Session["rank"]</h3>*@
+
+        <h1>Name: @Session["name"] </h1>
+        <h1>Name: @ViewData["name"] </h1>
     </div>
 </body>
 </html>

@@ -28,8 +28,16 @@ namespace FirstMVCApplication.Controllers
         public ActionResult Index()
         {
             Session["name"] = "Saqib";
-            Session["rank"] = 1;
-            return View();
+            //Session["rank"] = 1;
+
+            ViewData["name"] = "Saqib Aminul";
+
+            return RedirectToAction("Another");
+        }
+
+        public ActionResult Another()
+        {
+            return View("Index");
         }
     }
 }
