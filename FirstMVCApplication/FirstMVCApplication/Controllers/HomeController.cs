@@ -10,7 +10,7 @@ namespace FirstMVCApplication.Controllers
     {
         public ActionResult Index(int? id)
         {
-            return RedirectToAction("Another", new { id = id });
+            return RedirectToAction("Another", new { id });
         }
         public ActionResult Another(int? id)
         {
