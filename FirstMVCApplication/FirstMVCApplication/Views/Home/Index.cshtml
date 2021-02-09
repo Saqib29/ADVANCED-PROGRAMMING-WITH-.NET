@@ -14,8 +14,10 @@
 
         @*<h1>Name: @ViewData["name"] </h1>*@
 
-        <h1>Name: @ViewBag.name </h1>
-        <h1>Id: @ViewData["id"] </h1>
+        @*<h1>Name: @ViewBag.name </h1>
+        <h1>Id: @ViewData["id"] </h1>*@
+
+        <h1>Name - @TempData["name"] </h1>
     </div>
 </body>
 </html>

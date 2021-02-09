@@ -32,8 +32,10 @@ namespace FirstMVCApplication.Controllers
 
             //ViewData["name"] = "Saqib Aminul";
 
-            ViewBag.name = "Aminul Islam Saqib";
-            ViewBag.id = "17-34879-2";
+            //ViewBag.name = "Aminul Islam Saqib";
+            //ViewBag.id = "17-34879-2";
+
+            TempData["name"] = "Saqib";
 
             return View();
             //return RedirectToAction("Another");
