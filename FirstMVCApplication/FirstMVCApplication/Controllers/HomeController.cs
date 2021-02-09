@@ -8,14 +8,19 @@ namespace FirstMVCApplication.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index(int? id)
+        //public ActionResult Index(int? id)
+        //{
+        //    return RedirectToAction("Another", new { id });
+        //}
+        //public ActionResult Another(int? id)
+        //{
+        //    //return Content("From another method: " + id);
+        //    return RedirectToAction("MyMethod", "Person");
+        //}
+
+        public ActionResult Index()
         {
-            return RedirectToAction("Another", new { id });
-        }
-        public ActionResult Another(int? id)
-        {
-            //return Content("From another method: " + id);
-            return RedirectToAction("MyMethod", "Person");
+            return View();
         }
     }
 }
