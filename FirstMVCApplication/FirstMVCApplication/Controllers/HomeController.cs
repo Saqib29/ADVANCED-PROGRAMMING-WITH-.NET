@@ -6,39 +6,23 @@ using System.Web.Mvc;
 
 namespace FirstMVCApplication.Controllers
 {
+    public class Person
+    {
+        public string Name { get; set; }
+        public string Id { get; set; }
+    }
     public class HomeController : Controller
     {
-        //public ActionResult Index(int? id)
-        //{
-        //    return RedirectToAction("Another", new { id });
-        //}
-        //public ActionResult Another(int? id)
-        //{
-        //    //return Content("From another method: " + id);
-        //    return RedirectToAction("MyMethod", "Person");
-        //}
-
-        // Data passing technique from controler to view
-        //1. Session
-        //2. ViewData
-        //3. ViewBag
-        //4. TempData
-        //5. Model(ViewModel/DataModel)
-
+        
         public ActionResult Index()
         {
-            //Session["name"] = "Saqib";
-            //Session["rank"] = 1;
+            Person person = new Person() { Name = "Saqib Aminul", Id = "17-34879-2" };
 
-            //ViewData["name"] = "Saqib Aminul";
+            //person.Name = "Saqib Aminul Islam";
+            //person.Id = "17-34879-2";
 
-            //ViewBag.name = "Aminul Islam Saqib";
-            //ViewBag.id = "17-34879-2";
-
-            TempData["name"] = "Saqib";
-
-            //return View();
-            return RedirectToAction("Another");
+            return View(person);
+            //return RedirectToAction("Another");
         }
 
         public ActionResult Another()
