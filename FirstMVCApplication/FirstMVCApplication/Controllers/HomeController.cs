@@ -18,8 +18,17 @@ namespace FirstMVCApplication.Controllers
         //    return RedirectToAction("MyMethod", "Person");
         //}
 
+        // Data passing technique from controler to view
+        //1. Session
+        //2. ViewData
+        //3. ViewBag
+        //4. TempData
+        //5. Model(ViewModel/DataModel)
+
         public ActionResult Index()
         {
+            Session["name"] = "Saqib";
+            Session["rank"] = 1;
             return View();
         }
     }
