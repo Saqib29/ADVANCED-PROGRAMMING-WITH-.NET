@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FirstMVCApplication.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,11 +7,11 @@ using System.Web.Mvc;
 
 namespace FirstMVCApplication.Controllers
 {
-    public class Person
-    {
-        public string Name { get; set; }
-        public string Id { get; set; }
-    }
+    //public class Person
+    //{
+    //    public string Name { get; set; }
+    //    public string Id { get; set; }
+    //}
     public class HomeController : Controller
     {
         List<Person> person = new List<Person>()
@@ -19,6 +20,7 @@ namespace FirstMVCApplication.Controllers
             new Person(){ Name = "Aminul Islam", Id = "17-34879-2" },
             new Person(){ Name = "Saqib Aminul Islam", Id = "17-34879-2" },
             new Person(){ Name = "Aminul Islam Saqib", Id = "17-34879-2" },
+            new Person(){ Name = "My Name", Id = "1-----1" }
         };
 
     public ActionResult Index()
