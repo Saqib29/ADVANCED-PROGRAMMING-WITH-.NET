@@ -8,9 +8,13 @@ namespace FirstMVCApplication.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index(int? id)
+        public ActionResult Index(int? id)
         {
-            return "It works" + id;
+            return RedirectToAction("Another");
+        }
+        public string Another()
+        {
+            return "From another method";
         }
     }
 }
