@@ -13,13 +13,17 @@ namespace FirstMVCApplication.Controllers
     }
     public class HomeController : Controller
     {
-        
-        public ActionResult Index()
+        List<Person> person = new List<Person>()
         {
-            Person person = new Person() { Name = "Saqib Aminul", Id = "17-34879-2" };
+            new Person(){ Name = "Saqib Aminul", Id = "17-34879-2" },
+            new Person(){ Name = "Aminul Islam", Id = "17-34879-2" },
+            new Person(){ Name = "Saqib Aminul Islam", Id = "17-34879-2" },
+            new Person(){ Name = "Aminul Islam Saqib", Id = "17-34879-2" },
+        };
 
-            //person.Name = "Saqib Aminul Islam";
-            //person.Id = "17-34879-2";
+    public ActionResult Index()
+        {
+            //Person person = new Person() { Name = "Saqib Aminul", Id = "17-34879-2" };
 
             return View(person);
             //return RedirectToAction("Another");

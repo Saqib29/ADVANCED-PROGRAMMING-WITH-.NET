@@ -1,4 +1,4 @@
-﻿@model FirstMVCApplication.Controllers.Person
+﻿@model IEnumerable<FirstMVCApplication.Controllers.Person>
 <!DOCTYPE html>
 
 <html>
@@ -8,8 +8,19 @@
 </head>
 <body>
     <div> 
-        <h1>Name: <strong>@Model.Name</strong></h1>
-        <h2>ID: <strong>@Model.Id</strong></h2>
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Id</th>
+            </tr>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Id</td>
+                </tr>
+            }
+        </table>
     </div>
 </body>
 </html>
