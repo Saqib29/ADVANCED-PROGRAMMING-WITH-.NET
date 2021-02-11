@@ -15,7 +15,7 @@ namespace FirstMVCApplication.Controllers
             {
                 return View();
             }
-            return Content("Hello");
+            return Content(Request["name"]);
         }
 
         public ActionResult Another()
