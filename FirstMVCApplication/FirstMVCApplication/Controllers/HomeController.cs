@@ -22,11 +22,13 @@ namespace FirstMVCApplication.Controllers
         // 4. Model binding
         
         [HttpPost]
-        public ActionResult Index(string name, double salary)
+        //public ActionResult Index(string name, double salary)
+        public ActionResult Index(FormCollection collection)
         {
             //return Content(Request["name"]);
+            //return Content(name + " -> " + salary);
 
-            return Content(name + " -> " + salary);
+            return Content(collection["name"] + " -> " + collection["salary"]);
         }
 
         public ActionResult Another()
