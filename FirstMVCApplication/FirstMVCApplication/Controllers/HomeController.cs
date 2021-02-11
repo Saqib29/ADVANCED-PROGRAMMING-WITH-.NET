@@ -14,10 +14,19 @@ namespace FirstMVCApplication.Controllers
         {
             return View();
         }
+
+        // Retrieve the value from the request
+        // 1. Request
+        // 2. Using parameters
+        // 3. FormCollection
+        // 4. Model binding
+        
         [HttpPost]
-        public ActionResult Index(int? i)
+        public ActionResult Index(string name, double salary)
         {
-            return Content(Request["name"]);
+            //return Content(Request["name"]);
+
+            return Content(name + " -> " + salary);
         }
 
         public ActionResult Another()
