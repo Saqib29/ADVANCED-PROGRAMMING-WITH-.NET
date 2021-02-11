@@ -7,39 +7,20 @@ using System.Web.Mvc;
 
 namespace FirstMVCApplication.Controllers
 {
-    //public class Person
-    //{
-    //    public string Name { get; set; }
-    //    public string Id { get; set; }
-    //}
     public class HomeController : Controller
     {
-        List<Person> person = new List<Person>()
+        public ActionResult Index()
         {
-            new Person(){ Name = "Saqib Aminul", Id = "17-34879-2" },
-            new Person(){ Name = "Aminul Islam", Id = "17-34879-2" },
-            new Person(){ Name = "Saqib Aminul Islam", Id = "17-34879-2" },
-            new Person(){ Name = "Aminul Islam Saqib", Id = "17-34879-2" },
-            new Person(){ Name = "My Name", Id = "1-----1" }
-        };
-
-    public ActionResult Index()
-        {
-            //Person person = new Person() { Name = "Saqib Aminul", Id = "17-34879-2" };
-
-            return View(person);
-            //return RedirectToAction("Another");
+            if(Request.HttpMethod == "GET")
+            {
+                return View();
+            }
+            return Content("Hello");
         }
 
         public ActionResult Another()
         {
-            //return View("Index");
-            return RedirectToAction("Another2");
-        }
-
-        public ActionResult Another2()
-        {
-            return View("Index");
+            return Content("It works!!");
         }
     }
 }

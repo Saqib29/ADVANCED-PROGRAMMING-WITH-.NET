@@ -10,19 +10,22 @@
 </head>
 <body>
     <div> 
-        <table border="1">
-            <tr>
-                <th>Name</th>
-                <th>Id</th>
-            </tr>
-            @foreach(var item in Model)
-            {
+        <form method="post" action="/home/another">
+            <table>
                 <tr>
-                    <td>@item.Name</td>
-                    <td>@item.Id</td>
+                    <td><label>Name</label></td>
+                    <td><input type="text" name="name" /></td>
                 </tr>
-            }
-        </table>
+                <tr>
+                    <td><label>Salary</label></td>
+                    <td><input type="number" name="salary" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Submit" /></td>
+                </tr>
+            </table>
+        </form>
     </div>
 </body>
 </html>
