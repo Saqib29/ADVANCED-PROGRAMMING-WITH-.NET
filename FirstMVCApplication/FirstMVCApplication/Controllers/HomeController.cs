@@ -23,13 +23,13 @@ namespace FirstMVCApplication.Controllers
         
         [HttpPost]
         //public ActionResult Index(string name, double salary)
-        public ActionResult Index(Person person)
+        public ActionResult Index(Person person, Product product)
         {
             //return Content(Request["name"]);
             //return Content(name + " -> " + salary);
             //return Content(collection["name"] + " -> " + collection["salary"]);
 
-            return Content(person.Name + " -> " + person.Salary);
+            return Content(person.Name + " -> " + person.Salary + " | " + product.ProductName + " -> " + product.Price);
         }
 
         public ActionResult Another()
