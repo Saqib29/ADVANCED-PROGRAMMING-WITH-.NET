@@ -9,12 +9,14 @@ namespace FirstMVCApplication.Controllers
 {
     public class HomeController : Controller
     {
+        [HttpGet]
         public ActionResult Index()
         {
-            if(Request.HttpMethod == "GET")
-            {
-                return View();
-            }
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Index(int? i)
+        {
             return Content(Request["name"]);
         }
 
