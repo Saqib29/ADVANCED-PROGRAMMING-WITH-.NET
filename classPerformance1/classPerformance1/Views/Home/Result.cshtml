@@ -1,0 +1,45 @@
+﻿@model classPerformance1.Models.Form
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Result</title>
+</head>
+<body>
+    <div> 
+        <h1>Form Information</h1>
+        <table border="1">
+            <tr>
+                <td>Name: </td>
+                <td>@Model.Name</td>
+            </tr>
+            <tr>
+                <td>Username: </td>
+                <td>@Model.Username</td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td>@Model.Password</td>
+            </tr>
+            <tr>
+                <td>Date of Birth: </td>
+                <td>@Model.DateOfBirth</td>
+            </tr>
+            <tr>
+                <td>Gender: </td>
+                <td>@Model.Gender</td>
+            </tr>
+            <tr>
+                <td>Blood Group: </td>
+                <td>@Model.BloodGroup</td>
+            </tr>
+            <tr>
+                <td>Image</td>
+                <td>@Model.ProfilePicture</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
