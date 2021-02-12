@@ -66,6 +66,7 @@ namespace classPerformance1.Controllers
                     
                     string path = Path.Combine(Server.MapPath("~/UploadedFiles/"), form.ProfilePicture.FileName);
                     form.ProfilePicture.SaveAs(path);
+                    form.ImageName = form.ProfilePicture.FileName;
                 }
             }
             catch

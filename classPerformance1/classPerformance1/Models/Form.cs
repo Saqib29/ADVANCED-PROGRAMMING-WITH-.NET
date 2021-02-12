@@ -15,5 +15,6 @@ namespace classPerformance1.Models
         public string BloodGroup { get; set; }
         public string Gender { get; set; }
         public HttpPostedFileBase ProfilePicture { get; set; }
+        public string ImageName { get; set; }
     }
 }
