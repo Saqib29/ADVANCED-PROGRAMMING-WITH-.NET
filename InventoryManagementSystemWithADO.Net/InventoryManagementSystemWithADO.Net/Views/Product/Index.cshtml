@@ -1,0 +1,35 @@
+﻿@model List<InventoryManagementSystemWithADO.Net.Models.Product>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <a href="/product/create">Create Product</a>
+    </div>
+    <br />
+    <div> 
+        <table border="1">
+            <tr>
+                <th>Product name</th>
+                <th>Price</th>
+                <th>Operation</th>
+            </tr>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.ProductId</td>
+                    <td>@item.ProductName</td>
+                    <td>@item.Price</td>
+                    <td>
+                        <a href="/product/edit/@item.ProductId">Edit</a>&nbsp;&nbsp; |&nbsp;&nbsp; <a href="/product/delete/@item.ProductId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

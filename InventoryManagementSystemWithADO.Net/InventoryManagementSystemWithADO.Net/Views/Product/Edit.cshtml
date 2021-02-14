@@ -1,0 +1,34 @@
+﻿@model InventoryManagementSystemWithADO.Net.Models.Product
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <div>
+        <form method="post">
+            <table>
+                <tr>
+                    <td>Produc Name</td>
+                    <td><input type="text" name="productName" value="@Model.ProductName" /></td>
+                </tr>
+                <tr>
+                    <td>Produc price</td>
+                    <td><input type="number" name="Price" step="0.01" value="@Model.Price"/></td>
+                </tr>
+                <tr>
+                    <td>Category Id</td>
+                    <td><input type="number" name="CategoryId" value="@Model.CategoryId"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Submit" /></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
