@@ -39,7 +39,8 @@ namespace InventoryManagementSystemWithADO.Net.Controllers
             //return Content(product.ProductName +"   "+product.ProductId);
 
         }
-        public ActionResult Delete(int id)
+        [ActionName("Delete")]
+        public ActionResult Remove(int id)
         {
             productModel.Delete(id);
             return RedirectToAction("Index", "Product");

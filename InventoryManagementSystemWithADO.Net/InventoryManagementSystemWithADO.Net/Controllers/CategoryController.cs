@@ -38,7 +38,9 @@ namespace InventoryManagementSystemWithADO.Net.Controllers
             categoryModel.Update(category);
             return RedirectToAction("Index");
         }
-        public ActionResult Delete(int id)
+
+        [HttpGet, ActionName("Delete")]
+        public ActionResult DeleteAction(int id)
         {
             categoryModel.Delete(id);
             return RedirectToAction("Index");
