@@ -56,8 +56,9 @@ namespace DbFirstApproach.Controllers
         [HttpGet]
         public ActionResult Top()
         {
-            var list = context.Products.OrderByDescending(x => x.Price).Take(2).ToList();
-            return View(list);
+            //var list = context.Products.OrderByDescending(x => x.Price).Take(2).ToList();
+            var list = from item in context.Products orderby item.Price descending select item;
+            return View(list.Take(2));
         }
     }
 }
