@@ -53,5 +53,11 @@ namespace DbFirstApproach.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult Top()
+        {
+            var list = context.Products.OrderByDescending(x => x.Price).Take(2).ToList();
+            return View(list);
+        }
     }
 }
