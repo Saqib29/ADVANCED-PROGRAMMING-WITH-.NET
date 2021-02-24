@@ -16,9 +16,9 @@ namespace DbFirstApproach.Models
     public partial class Product
     {
         public int ProductId { get; set; }
-        [Required(ErrorMessage = "Product Name can't be empty!"), MaxLength(10, ErrorMessage = "Max Lentgh should be 10")]
+        //[Required(ErrorMessage = "Product Name can't be empty!"), MaxLength(10, ErrorMessage = "Max Lentgh should be 10")]
         public string ProductName { get; set; }
-        [Required, Range(0,1000)]
+        //[Required, Range(0,1000)]
         public double Price { get; set; }
         public int CategoryId { get; set; }
     

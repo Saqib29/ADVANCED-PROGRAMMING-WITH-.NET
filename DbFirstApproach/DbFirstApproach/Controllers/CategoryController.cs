@@ -22,9 +22,13 @@ namespace DbFirstApproach.Controllers
         [HttpPost]
         public ActionResult Create(Category category)
         {
-            context.Categories.Add(category);
-            context.SaveChanges();
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                context.Categories.Add(category);
+                context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View();
         }
         [HttpGet]
         public ActionResult Edit(int id)
