@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DbFirstApproach.Attributes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace DbFirstApproach.Models
     {
         
         public int CategoryId { get; set; }
-        [Required, Range(3,10), Display(Name = "Category Name")]
+        [Required, Range(3,10), Display(Name = "Category Name"), NameCheck(ErrorMessage = "+ Symbole is not allowed!")]
         public string CategoryName { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DbFirstApproach.Attributes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace DbFirstApproach.Models
     public class ProductMetaData
     {
         public int ProductId { get; set; }
-        [Required(ErrorMessage = "Product Name can not be empty!"), MaxLength(10, ErrorMessage = "Max Lentgh should be 10"), Display(Name = "Product Name")]
+        [Required(ErrorMessage = "Product Name can not be empty!"), MaxLength(10, ErrorMessage = "Max Lentgh should be 10"), Display(Name = "Product Name"), NameCheck(ErrorMessage = "+ Symbol is not allowed")]
         public string ProductName { get; set; }
         [Required, Range(0, 1000)]
         public double Price { get; set; }
