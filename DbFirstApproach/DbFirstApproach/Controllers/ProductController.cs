@@ -23,9 +23,16 @@ namespace DbFirstApproach.Controllers
         [HttpPost]
         public ActionResult Create(Product product)
         {
-            context.Products.Add(product);
-            context.SaveChanges();
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                context.Products.Add(product);
+                context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            //return RedirectToAction("Create");
+            ViewBag.categories = context.Categories.ToList();
+            return View();
+
         }
         [HttpGet]
         public ActionResult Edit(int id)
