@@ -16,7 +16,7 @@ namespace IMS_with_Repository_Pattern_Db_First
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Category", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

@@ -14,7 +14,7 @@ namespace IMS_with_Repository_Pattern_Db_First.Repositories
             context.Set<TEntity>().Remove(Get(id));
             context.SaveChanges();
         }
-
+        
         public TEntity Get(int id)
         {
             return context.Set<TEntity>().Find(id);
@@ -36,5 +36,6 @@ namespace IMS_with_Repository_Pattern_Db_First.Repositories
             context.Entry(entity).State = System.Data.Entity.EntityState.Modified;
             context.SaveChanges();
         }
+
     }
 }
