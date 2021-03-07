@@ -12,6 +12,6 @@ namespace IMS_with_Repository_Pattern_Db_First.Repositories
         TEntity Get(int id);
         void Insert(TEntity entity);
         void Update(TEntity entity);
-        void Delete(TEntity entity);
+        void Delete(int entity);
     }
 }
